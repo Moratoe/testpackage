@@ -23,7 +23,7 @@ def factorial(n):
 
     '''Created a recursive function that returns the factorial of the nth term'''
     "Args:"
-      "n (int): number of top items to return."
+    "n (int): number of top items to return."
 
     result = 1
     count = 2
