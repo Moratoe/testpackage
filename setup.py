@@ -8,7 +8,7 @@ setup(
     description='EDSA example python package',
     long_description=open('README.md').read(),
     install_requires=['numpy'],
-    url='https://github.com/Moratoe/testpackage',
+    url='https://github.com/Moratoe/testpackage.git',
     author='Moratoe',
     author_email='ratoe16@gmail.com'
 )
