@@ -14,6 +14,20 @@ def bubble_sort(items):
 
 def merge_sort(items):
     '''Return array of items, sorted in ascending order'''
+
+    len_sort = len(items)
+    # Base case. A list of size 1 is sorted.
+
+    if len_sort == 1:
+        return items
+    # Recursive case. Find midpoint of list
+    midp = int(len_sort / 2)
+
+    index1 = merge_sort(items[:midp]) # divide list into two halves
+    index2 = merge_sort(items[midp:]) # call merge_sort function on each half of list
+
+    return merge(index1, index2)
+
 def merge(A, B):
     new_list = []
     while len(A) > 0 and len(B) > 0:
@@ -30,18 +44,6 @@ def merge(A, B):
         new_list = new_list + A
 
     return new_list
-    len_sort = len(items)
-    # Base case. A list of size 1 is sorted.
-
-    if len_sort == 1:
-        return items
-    # Recursive case. Find midpoint of list
-    midp = int(len_sort / 2)
-
-    index1 = merge_sort(items[:midp]) # divide list into two halves
-    index2 = merge_sort(items[midp:]) # call merge_sort function on each half of list
-
-    return merge(index1, index2)
 
 def quick_sort(items):
     '''Return array of items, sorted in ascending order'''
